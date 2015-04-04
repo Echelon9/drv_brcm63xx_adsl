@@ -1,0 +1,13 @@
+# make file
+.*
+!.gitignore
+*~
+*.o
+core
+*.ko
+*.mod.c
+Module.symvers
+modules.order
+
+# documentation
+doc/doxygen
