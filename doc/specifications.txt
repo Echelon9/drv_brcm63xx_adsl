@@ -1,0 +1,7 @@
+Specification resources for the Broadcom 63xx SOC:
+
+http://wiki.openwrt.org/doc/hardware/soc/soc.broadcom.bcm63xx
+
+http://bcm63xx.sipsolutions.net/
+
+http://wiki.openwrt.org/inbox/adsl_support
