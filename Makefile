@@ -21,13 +21,13 @@ astyle: $(CSOURCES)
 ## doxygen     : generate documentation of the C code
 doxygen: doc/doxygen/html/index.html
 
-doc/doxygen/html/index.html: ${CSOURCES}
+doc/doxygen/html/index.html: $(CSOURCES)
 	mkdir -p doc/doxygen
 	doxygen
 
 ## cppcheck    : check for many code issues
-cppcheck: ${CSOURCES}
-	cppcheck ${CSOURCES} --enable=all --platform=unix64 \
+cppcheck: $(CSOURCES)
+	cppcheck $(CSOURCES) --enable=all --platform=unix64 \
 	--std=c99 --inline-suppr --quiet 
 
 ## sloccount   : count lines of code
