@@ -6,9 +6,11 @@ else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 	PWD       := $(shell pwd)
 
+## all         : default task; compile C code, build kernel module
 all:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
 
+## clean       : clean up all temporary / machine-generated files
 clean:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
 endif
@@ -33,3 +35,7 @@ cppcheck: $(CSOURCES)
 ## sloccount   : count lines of code
 sloccount: 
 	sloccount .
+
+## help        : print this help message and exit
+help: Makefile
+	@sed -n 's/^## //p' $<
