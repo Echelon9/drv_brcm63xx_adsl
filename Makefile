@@ -1,7 +1,8 @@
+TARGET=brcm63xx_adsl_drv
 CSOURCES=$(wildcard *.c *.h)
 
 ifneq ($(KERNELRELEASE),)
-	obj-m := brcm63xx_adsl_drv.o
+	obj-m := $(TARGET).o
 else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 	PWD       := $(shell pwd)
@@ -9,6 +10,14 @@ else
 ## all         : default task; compile C code, build kernel module
 all:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+
+## load        : load kernel module
+load:
+	sudo insmod $(PWD)/$(TARGET).ko
+
+## unload      : unload kernel module
+unload:
+	sudo rmmod $(TARGET)
 
 ## clean       : clean up all temporary / machine-generated files
 clean:
