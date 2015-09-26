@@ -23,6 +23,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Rhys Kidd");
+MODULE_DESCRIPTION("Broadcom brcm63xx ADSL driver");
 
 static int __init adsl_init(void)
 {
