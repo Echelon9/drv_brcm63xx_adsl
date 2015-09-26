@@ -13,6 +13,7 @@ all:
 ## clean       : clean up all temporary / machine-generated files
 clean:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
+	rm -rf doc/doxygen
 endif
 
 
