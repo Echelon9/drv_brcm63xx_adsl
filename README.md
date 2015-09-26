@@ -11,7 +11,7 @@ wireless NIC.
 
 This SoC is widely used by most xDSL platforms in the world. It is one of
 the most successful xDSL platforms due to the simplicity of migrating old
-platforms (e.g BCM6345) to new onoes without much software development.
+platforms (e.g BCM6345) to new ones without much software development.
 
 The architecture is based on a standard MIP32 Big Endian instruction set, and
 shares some features with the R4000 microprocessor.
